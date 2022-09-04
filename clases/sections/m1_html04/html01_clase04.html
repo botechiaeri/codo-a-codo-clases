@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Formularios </title>
+    <style>
+        form label, form>p{
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="GET">
+        <label for="nameUser">Nombre: </label>
+        <input type="text" for="nameUser" id="nameUser" placeholder="Pepe Suarez">
+   <!-- FOR = ES PARA -- label es para este input -->
+
+   <label>Apellido
+    <input type="text" name="lastNameUser" id="lastNameUser"  >
+    </label>
+<!-- NUMBER -->
+
+    <label for="edadUser"><input type="number" name="edadUser" id="edadUser" min="18" max="99">
+    </label>
+
+<!-- EMAIL -->
+<p>
+    <label for="emailUser">E-mail
+    <input type="email" name="emailUser" id="emailUser" minlength="9" maxlength="250" pattern=".+@.+\.com">
+    </label>
+</p>
+<!-- fecha -->
+
+<label>Fecha Cumple
+    <input type="date" name="dateBirth" id="dateBirth">
+    </label>
+    
+    <!-- PASSWORD -->
+    <p>
+    <label for="passwordUser">Contrasena</label>
+        <input type="password" name="passwordUser" pattern="[(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$]" id="passwordUser" minlength="5" maxlength="8" size="8" required> 
+    </p>
+<!-- size = tamano visual minlenght=numero minimo de caracteres maxlenght = numero maximo caracteres -->
+        <!-- pattern usa expresiones regulares tipo de conjunto de caracteres que acepta -->
+
+<!-- file -->
+        <!-- <label>Archivo
+            <input type="file" name="fileUser" id="fileUser">
+            </label> -->
+            <label>COLOR PICKER
+                <input type="color" name="colorForUser" id="colorForUser">
+    </label>
+
+
+
+<fieldset>
+    <legend>CHECK SELECT</legend>
+    <label for="opt1">
+        <input type="checkbox" name="opt1" value="check01"> CHECK #01
+    </label>
+    <label for="opt1">
+        <input type="checkbox" name="opt1" value="check02"> CHECK #02
+    </label>
+    <label for="opt1">
+        <input type="checkbox" name="opt1" value="check03"> CHECK #03
+    </label>
+</fieldset>
+
+<p>
+<label></label>
+
+</p>
+
+                <!-- <label for="opt1">
+                    <input type="checkbox" name="opt1" value="check01"> CHECK #01
+                </label>
+                <label for="opt1">
+                    <input type="checkbox" name="opt1" value="check02"> CHECK #02
+                </label>
+                <label for="opt1">
+                    <input type="checkbox" name="opt1" value="check03"> CHECK #03
+                </label> -->
+            <button type="submit">Enviar datos</button>
+    </form>
+<section>
+    <h2>HTTP VERBS - GET </h2>
+    <ul>
+        <li>Server deve siempre dudar de la info ingresada - <strong>VALIDACION EN BACK NECESARIA!</strong></li>
+        <li>Validacion en FRONT es para <strong>USABILIDADE!!!</strong></li>
+        <li>QUERY STRING
+            <ul>
+                <li>CLAVE=VALOR</li>
+                <li>SEPARADOR-&-SEPARADOR</li>
+                <li>clave2=valor2</li>
+            </ul>
+        </li>
+        <li>ATRIBUTOS PARA FORM
+            <ul>
+                <li>maxlenght="10" limita caracteres</li>
+                <li>edad min="18" max="99"</li>
+                <li></li>
+                <li></li>
+            </ul>
+        </li>
+        <li></li>
+    </ul>
+</section>
+</body>
+</html>
